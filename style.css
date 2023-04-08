@@ -1,0 +1,180 @@
+:root{
+    --lightRed: hsl(0, 100%, 67%);
+    --orangeyYellow: hsl(39, 100%, 56%);
+    --greenTeal: hsl(166, 100%, 37%);
+    --cobaltBlue: hsl(234, 85%, 45%);
+
+    --lightSlateBlue: hsl(252, 100%, 67%); /*Background*/
+    --lightRoyalBlue: hsl(241, 81%, 54%); /*Background*/
+
+    --violetBlue: hsla(256, 72%, 46%, 1); /*Circle*/
+    --persianBlue: hsla(241, 72%, 46%, 0); /*Circle*/
+
+    --white: hsl(0, 0%, 100%);
+    --paleBlue: hsl(221, 100%, 96%);
+    --lightLavender: hsl(241, 100%, 85%);
+    --darkGrayBlue: hsl(224, 30%, 27%);
+
+    --lightGrey: hsl(0, 0%, 62%);
+
+    --borderTest: solid 1px red;
+}
+
+body{
+    font-family: 'Hanken Grotesk', sans-serif;
+    margin: 0;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    display: grid;
+    grid-template-areas: "result summary";
+    grid-template-columns: 50% 50%;
+
+    width: 550px;
+    height: 380px;
+}
+
+.result{
+    grid-area: result;
+    background: linear-gradient(hsl(252, 100%, 62%) 15%, hsl(241, 81%, 54%) 85%);
+    color: var(--white);
+    text-align: center;
+    border-radius: 25px;
+    padding-top: 15px;
+}
+
+.resultTitle h3{
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--lightLavender);
+}
+
+.circle{
+    background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    width: 150px;
+    height: 150px;
+
+    border-radius: 50%;
+    margin: auto;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle h1{
+    font-size: 52px;
+
+    margin: 0;
+    padding: 0;
+}
+
+.circle p{
+    font-size: 14px;
+    margin: 0;
+    color: var(--lightLavender);
+}
+
+.message{
+    width: 200px;
+    margin: auto;
+}
+
+.messageTitle{
+    font-size: 22px;
+    margin-bottom: 0;
+}
+
+.messageText{
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--lightLavender);
+}
+
+.summary {
+    grid-area: summary;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 35px;
+}
+
+.titleSummary h3{
+    font-size: 18px;
+    font-weight: 800;
+    text-align: left;
+    margin: 0;
+}
+
+.reaction, .memory, .verbal, .visual{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 700;
+    width: 200px;
+    margin-left: 10px;
+}
+
+.reactionGroup1, .memoryGroup1, .verbalGroup1, .visualGroup1{
+    display: flex;
+    width: 100px;
+}
+
+.reactionGroup2, .memoryGroup2, .verbalGroup2, .visualGroup2{
+    color: var(--lightGrey);
+}
+
+.reactionText, .memoryText, .verbalText, .visualText{
+    margin-left: 8px;
+}
+
+.contentSummary b{
+    color: black;
+}
+
+.reactionText{
+    color: var(--lightRed);
+}
+
+.memoryText{
+    color: var(--orangeyYellow);
+}
+
+.verbalText{
+    color: var(--greenTeal);
+}
+
+.visualText{
+    color: var(--cobaltBlue);
+}
+
+.continueButton{
+    width: 225px;
+    height: 40px;
+    background-color: var(--darkGrayBlue);
+    color: var(--white);
+    border: none;
+    border-radius: 20px;
+    transition: none 1s ease;
+}
+
+.continueButton:hover{
+    background-color: var(--lightRoyalBlue);
+    cursor: pointer;
+    transition: 1s;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
